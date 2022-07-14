@@ -1,0 +1,22 @@
+{% extends "r3pyle/base.html" %}
+{% block content %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="text-muted">These questions should follow the third run through a facsimile CAD list.<br />The third run is with an algorithmic assistive tool.</small>
+            </div>
+            <h2><a class="article-title" href="#">Questions after third run (1C)</a></h2>
+            {% for question in questions %}
+              <p class="article-content">{{ question.qcontent }}</p>
+            {% endfor %}
+            <p class="article-content">
+              Did you work strictly down the list in order? Or did you skim the list looking for notable calls?
+              Did you find the assist score helpful?
+              How do you feel about your choices of which to view?
+              Do you think that’s the same as when you’re working the ECCH desk?
+              How do you think your choices about viewing match those of your colleagues?
+              Qs 5-8
+              Do you have any thoughts on the process as a whole?</p>
+          </div>
+        </article>
+{% endblock content %}

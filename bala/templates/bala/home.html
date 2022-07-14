@@ -1,0 +1,18 @@
+{% extends "bala/base.html" %}
+{% block content %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="text-muted">We'd like to know a bit about your expectations of AI technology in general.<br />Not just in an EMRTS context, but in everyday life.</small>
+            </div>
+            <h2><a class="article-title" href="#">Preliminary questions</a></h2>
+            {% for question in questions %}
+              <p class="article-content">{{ question.qcontent }}</p>
+            {% endfor %}
+            <p class="article-content">
+              Imagine you’re on a busy ECCH shift and have been occupied away from the CAD for ten minutes. Your colleague is busy on the phone.<br />
+              Think about a case that you’re seeing in the waiting stack for the first time. A case that is ‘a possible’ or ‘a non-obvious’ case for viewing. <br />
+              Do you think you're more likely to view that case compared to colleagues? Or are you more likely to move on and less likely to view that case compared to colleagues?</p>
+          </div>
+        </article>
+{% endblock content %}
